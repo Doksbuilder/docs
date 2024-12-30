@@ -42,7 +42,7 @@
 } */
 
 .navbar .navbar__link {
-  color: var(--ifm-hero-text-color);
+  color: var(--ifm-hero-menu-color);
   font-weight: var(--ifm-font-weight-semibold);
   font-family: 'Inter';
   
