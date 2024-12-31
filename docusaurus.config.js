@@ -46,18 +46,18 @@ const config = {
         //   trackingID: "G-KGVK27VGQ7",
         //   anonymizeIP: true,
         // },
-        // sitemap: {
-        //   changefreq: "weekly",
-        //   priority: 0.5,
-        //   filename: "sitemap.xml",
-        // },
+        sitemap: {
+          changefreq: "weekly",
+          priority: 0.5,
+          filename: "sitemap.xml",
+        },
         docs: {
           routeBasePath: '/',
           sidebarPath: "./sidebars.js",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/adematics",
+            "https://github.com/Doksbuilder/docs",
         },
         blog: false,
         // blog: {
@@ -159,7 +159,7 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
-        // additionalLanguages: ["latex"],
+        additionalLanguages: ["latex"],
       },
     }),
   // stylesheets: ["https://fonts.googleapis.com/icon?family=Material+Icons"],
@@ -172,6 +172,7 @@ const config = {
         // ... Your options.
         // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,
+        docsRouteBasePath: "/", 
         // For Docs using Chinese, The `language` is recommended to set to:
         // ```
         // language: ["en", "zh"],
