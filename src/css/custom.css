@@ -13,6 +13,17 @@
   --ifm-color-primary-light: #4843f8;
   --ifm-color-primary-lighter: #5550f9;
   --ifm-color-primary-lightest: #6561f9;
+  --ifm-font-family-base: "Inter";
+  --ifm-menu-color: var(--ifm-color-emphasis-900);
+
+  /* --color-white: hsl(0, 0%, 100%);
+  --color-grey-40: hsl(240, 25%, 98%);
+  --color-grey-100: hsl(240, 12%, 92%);
+  --color-grey-400: hsl(240, 10%, 59%);
+  --color-grey-500: hsl(240, 10%, 49%);
+  --color-grey-900: hsl(240, 19%, 18%);
+  --color-green-50: hsl(184, 67%, 92%);
+  --color-blue-30: hsl(240, 100%, 98%); */
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
