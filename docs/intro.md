@@ -21,6 +21,8 @@ import { ArcadeEmbed } from '@site/src/components/ArcadeEmbed';
 
 ## Why Teams Love Index
 
+Index redefines how teams interact with data, making analysis, visualization, and collaboration seamless. With powerful AI-driven features and an intuitive interface, Index helps teams uncover insights faster, share them effortlessly, and stay aligned every step of the way: 
+
 - **All-in-One Platform:** Everything you need for data analysis and collaboration, all in one place.
 - **Easy for Everyone:** Designed for users of all skill levels, from SQL experts to non-technical teammates.
 - **Collaboration Built In:** Share, comment, and iterate in real time, keeping your team aligned.
