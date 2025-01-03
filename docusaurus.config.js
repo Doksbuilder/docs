@@ -8,7 +8,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Crafted by hand — Powered by data.",
+  title: "Index | Crafted by hand — Powered by data.",
   tagline:
     "Analytis, Data Science, and Machine Learning",
   favicon: "img/favicon.ico",
@@ -26,7 +26,7 @@ const config = {
   trailingSlash: false,
   deploymentBranch: "gh-pages",
 
-  onBrokenLinks: "ignore",
+  onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
@@ -54,10 +54,12 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: "./sidebars.js",
+          showLastUpdateTime: true, // Optional: show the last updated time
+          // showLastUpdateAuthor: true, // Optional: show the last update author
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/Doksbuilder/docs",
+          // editUrl:
+          //   "https://github.com/Doksbuilder",
         },
         blog: false,
         // blog: {
@@ -70,6 +72,7 @@ const config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
+        
       }),
     ],
   ],
@@ -89,13 +92,39 @@ const config = {
         // Enable last updated feature
 
         items: [
+          // {
+          //   type: "docSidebar",
+          //   sidebarId: "TutorialSidebar",
+          //   position: "left",
+          //   label: "Docs",
+          // },
           {
-            type: "docSidebar",
-            sidebarId: "tutorialSidebar",
+            href: "https://index.app/home",
             position: "left",
-            label: "Docs",
+            label: "About Index",
+          },
+          {
+            href: "https://index.app/blog/?category=all-posts&page=1",
+            position: "left",
+            label: "Blogs",
           },
           // { to: "/blog", label: "Blog", position: "left" },
+          {
+            href: "mailto:support@index.app",
+            position: "right",
+            label: "Support",
+          },
+          {
+            href: "https://index.app/login",
+            position: "right",
+            label: "Log in",
+          },
+          {
+            href: "https://index.app/signup",
+            label: "Sign up",
+            position: "right",
+            className: "header-button",
+          },
           {
             href: "https://github.com/Adematics",
             position: "right",
@@ -110,52 +139,52 @@ const config = {
           // },
         ],
       },
-      showLastUpdateTime: true, // Optional: show the last updated time
-      footer: {
-        style: "dark",
-        // links: [
-        //   {
-        //     title: "About Me",
-        //     items: [
-        //       {
-        //         label: "My Work",
-        //         to: "docs/about_me/intro",
-        //       },
-        //     ],
-        //   },
-        //   {
-        //     title: "Community",
-        //     items: [
-        //       {
-        //         label: "LinkedIn",
-        //         href: "https://www.linkedin.com/in/federico-tartarini/",
-        //       },
-        //       {
-        //         label: "YouTube",
-        //         href: "https://www.youtube.com/c/FedericoTartarini",
-        //       },
-        //       {
-        //         label: "Twitter",
-        //         href: "https://twitter.com/FedericoTartar1",
-        //       },
-        //     ],
-        //   },
-        //   {
-        //     title: "More",
-        //     items: [
-        //       {
-        //         label: "Blog",
-        //         to: "/blog",
-        //       },
-        //       {
-        //         label: "GitHub",
-        //         href: "https://github.com/FedericoTartarini",
-        //       },
-        //     ],
-        //   },
-        // ],
-        copyright: `Copyright © ${new Date().getFullYear()} Index. Crafted by hand — Powered by data.`,
-      },
+      
+      // footer: {
+      //   style: "dark",
+      //   // links: [
+      //   //   {
+      //   //     title: "About Me",
+      //   //     items: [
+      //   //       {
+      //   //         label: "My Work",
+      //   //         to: "docs/about_me/intro",
+      //   //       },
+      //   //     ],
+      //   //   },
+      //   //   {
+      //   //     title: "Community",
+      //   //     items: [
+      //   //       {
+      //   //         label: "LinkedIn",
+      //   //         href: "https://www.linkedin.com/in/federico-tartarini/",
+      //   //       },
+      //   //       {
+      //   //         label: "YouTube",
+      //   //         href: "https://www.youtube.com/c/FedericoTartarini",
+      //   //       },
+      //   //       {
+      //   //         label: "Twitter",
+      //   //         href: "https://twitter.com/FedericoTartar1",
+      //   //       },
+      //   //     ],
+      //   //   },
+      //   //   {
+      //   //     title: "More",
+      //   //     items: [
+      //   //       {
+      //   //         label: "Blog",
+      //   //         to: "/blog",
+      //   //       },
+      //   //       {
+      //   //         label: "GitHub",
+      //   //         href: "https://github.com/FedericoTartarini",
+      //   //       },
+      //   //     ],
+      //   //   },
+      //   // ],
+      //   copyright: `Copyright © ${new Date().getFullYear()} Index. Crafted by hand — Powered by data.`,
+      // },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
@@ -180,6 +209,7 @@ const config = {
       }),
     ],
   ],
+  
 };
 
 export default config;

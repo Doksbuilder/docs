@@ -16,14 +16,15 @@
   --ifm-font-family-base: "Inter";
   --ifm-menu-color: var(--ifm-color-emphasis-900);
 
-  /* --color-white: hsl(0, 0%, 100%);
+  --color-white: hsl(0, 0%, 100%);
   --color-grey-40: hsl(240, 25%, 98%);
   --color-grey-100: hsl(240, 12%, 92%);
   --color-grey-400: hsl(240, 10%, 59%);
   --color-grey-500: hsl(240, 10%, 49%);
   --color-grey-900: hsl(240, 19%, 18%);
   --color-green-50: hsl(184, 67%, 92%);
-  --color-blue-30: hsl(240, 100%, 98%); */
+  --color-blue-30: hsl(240, 100%, 98%);
+  --color-dark-blue-700: hsl(240, 17%, 25%);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -35,6 +36,17 @@
   --ifm-color-primary-light: #f18e70;
   --ifm-color-primary-lighter: #f29a7f;
   --ifm-color-primary-lightest: #f7bcab;
+
+  --color-grey-40: hsl(240, 14%, 14%);
+  --color-grey-100: hsl(240, 15%, 15%);
+  --color-grey-400: hsl(240, 13%, 72%);
+  --color-grey-500: hsl(240, 10%, 70%);
+  --color-grey-900: hsl(240, 10%, 90%);
+  --color-green-50: hsl(184, 100%, 12%);
+  --color-blue-30: hsl(252, 25%, 18%);
+  --color-dark-blue-700: hsl(240, 100%, 98%);
+  --color-white: hsl(0, 0%, 16%);
+  --color-red-400: hsl(0, 81%, 71%);
 }
 
 .footer--dark {
@@ -86,4 +98,155 @@
 
 html[data-theme='dark'] .header--github-link:before {
   background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E") no-repeat;
+}
+
+/* resize youtube videos */
+.youtube-video {
+  height: 550px;
+}
+
+@media screen and (max-width: 1350px) {
+  .youtube-video {
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .youtube-video {
+    height: 200px;
+  }
+}
+
+
+/* Style for sidebar header */
+.sidebar-header {
+  font-size: .9em; /*Adjust the font size as needed*/
+  font-weight: 650;
+  /* color: var(--ifm-color-emphasis-900); Use primary color for text */
+  /* padding: 0.5rem 1rem; Adjust padding as needed */
+  /* border-bottom: 1px solid var(--ifm-color-primary); Optional: add a bottom border */
+  background-color: var(--ifm-hover-overlay); /* Use the hover background color */
+  color: var(--docsearch-text-color);
+  /* font-size: .8em;
+  font-weight: 700; */
+  padding: .4em 0 .4em .4em;
+}
+
+/* Hidden sidebar */
+/* .hidden-sidebar-item {
+  display: none !important;
+} */
+
+.navbar__item.header-button.navbar__link {
+  background: var(--ifm-color-primary);
+  color: white !important;
+  border-radius: 1.5em;
+}
+
+.navbar__item.header-button:hover {
+  background: var(--ifm-color-primary-darker);
+}
+
+
+/* Disable external link icons. */
+.navbar .navbar__link svg {
+  display: none;
+}
+
+.navbar__link--active {
+  cursor: pointer;
+  color: var(--ifm-navbar-link-color);
+  text-decoration: none;
+}
+
+.navbar__link:hover {
+  cursor: pointer;
+  color: #3b38e2;
+  text-decoration: none;
+}
+
+.navbar__category {
+  font-weight: 700;
+  font-size: 0.8em;
+  padding: 0.4em 0 0.4em 0.4em;
+  color: var(--docsearch-text-color);
+  background-color: var(--ifm-hover-overlay);
+}
+
+.navbar__category:not(:first-child) {
+  margin-top: 1.1em;
+}
+
+/* Card icon for grid */
+
+.card {
+  border-radius: 30px; /* Adjust the border-radius as needed */
+  overflow: hidden; /* Ensure content doesn't overflow the rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visual effect */
+}
+
+.card__icon {
+  text-align: left;
+  margin-left: 2rem; /* Adjust the left margin as needed */
+  margin-top: 2rem; /* Adjust the bottom margin as needed */
+  display: flex;
+  align-items: center; /* Align the icon with the description */
+}
+
+
+.card__header{
+  margin-left: 1rem;
+  
+}
+
+.card__body{
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.custom-grid {
+  margin-bottom: 1rem; /* Adjust the bottom margin as needed */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 columns layout */
+  gap: 1rem; /* Adjust the gap between grid items as needed */
+}
+
+.custom-grid-head {
+  margin-bottom: 2rem; /* Adjust the bottom margin as needed */
+}
+
+.card__footer {
+  padding: 1rem;
+  text-align: center; /* Center the footer text */
+}
+
+.card__button {
+  background-color: var(--color-dark-blue-700);
+  color: var(--color-white);
+  border-radius: 0.2em;
+  border: none;
+  cursor: pointer;
+  font-weight: medium;
+  padding: 0.5rem 1rem; /* Increase padding for larger button */
+  font-size: 1rem; 
+}
+
+.card__button:hover{
+  background-color: var(--color-dark-blue-700);
+  color: var(--color-white); 
+  text-decoration: none;
+}
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+  .custom-grid {
+    grid-template-columns: repeat(1, 1fr); /* 2 columns layout for medium screens */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .custom-grid {
+    grid-template-columns: 1fr; /* 1 column layout for small screens */
+  }
 }
